@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('doc/doctor_list', [App\Http\Controllers\DoctorController::class, 'index'])->name('doctor_list');
